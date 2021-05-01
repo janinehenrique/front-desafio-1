@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <title>Desafio Front-end Unidade 1</title>
+</head>
+
+<body>
+    <!--Cabecalho-->
+    <div class="cabecalho">
+        <div class="cabecalhoConteudo">
+            <img src="icones/Logo.svg" alt="Logo Ipsum" />
+            <!--Coloquei a div link para poder aplicar um flex space-around para separar da imagem logo-->
+            <div class="link">
+                <a href="#">Início</a>
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Principal-->
+    <div class="principal">
+        <!--Coloquei uma div para poder aplicar um flex center e alinhar o conteúdo-->
+        <div class="conteudoPrincipal">
+            <div class="posts">
+                <div class="post">
+                    <div class="postConteudo">
+                        <h1>Lorem ipsum dolor sit amet</h1>
+                        <p>02/05/2021 às 21:31 - By: Janine Henrique</p>
+                        <img src="icones/Imagem-01.svg" alt="Mulher com fone de ouvido" class="imagemPost" />
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus quis augue elementum vestibulum. Nam a orci erat. Aenean arcu mauris, finibus a rutrum quis, commodo sollicitudin nibh. Morbi diam lacus, suscipit nec maximus et, tincidunt at quam.
+                            <br />
+                            <br /> Curabitur sit amet euismod mi. Duis dictum vel ipsum vel tempus. Etiam diam nisl, feugiat ornare enim ac, aliquam ultrices erat. Nam tincidunt cursus dui. Integer varius nisi quis dui commodo, vitae euismod nisi elementum.
+                            Vivamus tincidunt id massa eget blandit.
+                        </p>
+
+                        <ul id="listaConteudo">
+                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                            <ul>
+                                <li>Lorem, ipsum dolor.</li>
+                                <li>Numquam, similique debitis!</li>
+                                <li>Itaque, nam labore?</li>
+                            </ul>
+                            <li>Quibusdam sapiente velit nulla delectus enim?</li>
+                            <li>Officia dolore autem sint aliquid commodi!</li>
+                            <li>Eius asperiores deserunt aliquid animi quo.</li>
+                            <li>
+                                Saepe explicabo blanditiis aspernatur suscipit voluptates.
+                            </li>
+                        </ul>
+                        <br />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus quis augue elementum vestibulum. Nam a orci erat. Aenean arcu mauris, finibus a rutrum quis, commodo sollicitudin nibh. Morbi diam lacus, suscipit nec maximus et, tincidunt at quam.
+                        </p>
+                        <br />
+
+                        <p>
+                            <em>
+                              Curabitur sit amet euismod mi. Duis dictum vel ipsum vel
+                              tempus. Etiam diam nisl, feugiat ornare enim ac, aliquam
+                              ultrices erat. Nam tincidunt cursus dui. Integer varius nisi
+                              quis dui commodo, vitae euismod nisi elementum. Vivamus
+                              tincidunt id massa eget blandit.
+                            </em>
+                        </p>
+                        <br />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus quis augue elementum vestibulum. Nam a orci erat. Aenean arcu mauris, finibus a rutrum quis, commodo sollicitudin nibh. Morbi diam lacus, suscipit nec maximus et, tincidunt at quam.
+                            <br />
+                            <br /> Curabitur sit amet euismod mi. Duis dictum vel ipsum vel tempus. Etiam diam nisl, feugiat ornare enim ac, aliquam ultrices erat. Nam tincidunt cursus dui. Integer varius nisi quis dui commodo, vitae euismod nisi elementum.
+                            Vivamus tincidunt id massa eget blandit.
+                        </p>
+                        <br />
+                        <br />
+                    </div>
+                    <!--fim da div postConteúdo-->
+
+                    <div class="comentario">
+                        <h2>Comentários</h2>
+                        <div class="dados">
+                            <label for="nome">Nome
+                <input name="Nome" type="text" id="nome" />
+              </label>
+
+                            <label for="email">E-mail
+                <input name="E-mail" type="email" id="email" />
+              </label>
+                        </div>
+                        <label for="area">
+              Comentários
+              <textarea name="area" id="area" cols="100" rows="10"></textarea>
+            </label>
+                        <a href="comentario.html" id="botaoComentario" title="Comentar">Comentar</a>
+                    </div>
+                    <!--fim da div comentário-->
+                </div>
+                <!--fim da div post-->
+            </div>
+            <!--Fim da div posts-->
+
+            <!--Barra Lateral-->
+            <div class="barraLateral">
+                <div class="barraConteudo">
+                    <input type="search" id="pesquiseAqui" name="Pesquise aqui" placeholder="Pesquise aqui... " />
+                    <h1>Categorias</h1>
+                    <ul class="categorias">
+                        <li>Tecnologia <span>25</span></li>
+                        <li>Estilo de vida <span>8</span></li>
+                        <li>Arte <span>2</span></li>
+                        <li>Comida <span>12</span></li>
+                        <li>Aventura <span>9</span></li>
+                        <li>Moda <span>12</span></li>
+                    </ul>
+                    <div class="publicidade">
+                        <h1>Publicidade</h1>
+                    </div>
+                    <div class="cards">
+                        <div class="card-vazio">
+                            <div class="card1">340x240</div>
+                        </div>
+                        <div class="card-vazio">
+                            <div class="card-vazio-texto">340x240</div>
+                        </div>
+                        <div class="card-vazio">
+                            <div>340x240</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Rodapé-->
+    <div class="rodape">
+        Copyright ©2021 Todos os direitos reservados | by Janine Henrique
+    </div>
+</body>
+
+</html>

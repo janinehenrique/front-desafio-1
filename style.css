@@ -1,0 +1,562 @@
+    /*
+Configurações globais.
+*/
+    
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+    * {
+        box-sizing: border-box;
+        font-family: "Open Sans";
+    }
+
+    /*
+O containter tem que ter 100% do tamanho disponível
+neste caso usamos box-sizing para que o pading e margin 
+dos filhos não ultrapassem a largura total do pai, caso 
+ela seja definida em pixels.
+*/    
+    body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        background-color: #e5e5e5;
+        color: #545454;
+    }
+    /*********************************CONFIGURAÇÃO DO LAYOUT PRINCIPAL"*******************************/
+    /*
+O background e width podem ficar tanto no container quanto 
+no filho, porém o display:flex deve ficar no filho para definir
+os elementos dentro dele.
+*/
+    .cabecalho {
+        box-sizing: border-box;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
+        background: #ffffff;
+    }
+    
+    .cabecalhoConteudo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        height: 70px;
+        width: 77%;
+    }
+
+    /*
+Estilização direto nos links.
+*/
+    .cabecalhoConteudo a {
+        box-sizing: border-box;
+        padding: 1rem 1.2rem;
+        /*refatorado*/
+        font-size: 1rem;
+        /*refatorado*/
+        text-decoration: none;
+        color: #545454;
+    }
+    
+    /*
+Estilização direta dos links quando o cursor
+passa por cima dos links.
+*/
+    .cabecalhoConteudo a:hover {
+        text-decoration: underline;
+        color: #fe0078;
+    }
+    
+    /*
+A class .principal centraliza o conteúdo no 
+meio do body. Ela está inline-block e ocupa todo
+o espaço disponível no body.
+*/
+    .principal {
+        display: flex;
+        justify-content: center;
+    }
+    
+    /*
+A class .conteudoPrincipal alinha os posts e a 
+barra lateral, ambas afastadas por um gap. 
+Possui um box-sizing para que o pading e margin 
+dos filhos não ultrapassem a largura total do pai.
+*/
+    .conteudoPrincipal {
+        box-sizing: border-box;
+        display: flex;
+        margin-top: 56px;
+        gap: 50px;
+    }
+   
+    /*
+A class .posts alinha verticalmente cada um dos
+3 post, afastando-os por um gap.Possui um box-
+sizing para que o pading e margin dos filhos 
+não ultrapassem a largura total do pai. A class
+possui um gap para separar as divs dos post.
+*/
+    .posts {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /*
+A class .post possui um box-sizing para que o 
+pading e margin dos filhos não ultrapassem a 
+largura total do pai
+*/    
+    .post {
+        box-sizing: border-box;
+        width: 730px;
+    }
+
+    /*
+A class .postConteudo alinha verticalmente os
+itens. Precisa ter a largura para configurar o
+botão
+*/    
+    .postConteudo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 14px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+        background: #ffffff;
+    }
+
+    /*
+Estiliza o h1 do cabeçalho da class .post.
+*/    
+    .postConteudo>h1 {
+        padding: 24px 0 0 24px;
+        margin: 0 0 8px 0;
+        color: #000000;
+        font-size: 24px;
+        font-family: "Open Sans";
+        font-weight: 700;
+    }
+
+    /*
+Estiliza o p do cabeçalho da class .post.
+*/    
+    .postConteudo>p {
+        padding: 0 24px;
+        margin: 0 0 14px 0;
+        font-size: 14px;
+    }
+    
+    .imagemPost {
+        margin: 0 0 24px 0;
+    }
+
+    /*
+A id #botaoContinuarLendo estiliza o link.
+Além disso ela configura o botão para ficar no 
+canto da página com o flex-direction, pois a 
+a configuração do flex-column faz ele ocupar toda 
+a linha disponível.
+*/    
+    #botaoContinuarLendo {
+        all: unset;
+        align-self: flex-end;
+        margin: 16px 24px 36px 0;
+        padding: 12px 24px;
+        border: 1px solid #fe0078;
+        border-radius: 20px;
+        color: #545454;
+    }
+    
+    #botaoContinuarLendo:hover {
+        background-color: #fe0078;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    /*********************************CONFIGURAÇÃO DAS PÁGINAS "CONTINUAR LENDO"*******************************/
+    
+    #listaConteudo {
+        font-size: 14px;
+        margin: 16px 0 0 62px;
+    }
+    
+    .comentario {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 730px;
+        margin-top: 10px;
+        padding: 0;
+        background-color: #e5e5e5;
+    }
+    
+    .comentario h2 {
+        margin: 41px 0 24px 0;
+        color: black;
+        padding: 0;
+        font-size: 24px;
+    }
+    
+    .dados {
+        box-sizing: border-box;
+        display: flex;
+        gap: 24px;
+        margin: 0 0 24px 0;
+        padding: 0;
+    }
+    
+    .dados input {
+        box-sizing: border-box;
+        width: 354px;
+        margin: 8px 0 0 0;
+        padding: 17px 20px;
+        font-size: 14px;
+        font-weight: 400;
+        border: 1px solid #eeeeee;
+    }
+    
+    .dados input:focus {
+        /*modifica a cor da borda do textarea quando selecionado*/
+        border: 1px solid #fe0078;
+        /*retira a borda padrão do textarea*/
+        outline: none;
+    }
+    
+    .dados input:hover {
+        cursor: pointer;
+        /*modifica a cor da borda do textarea quando o mouse passa*/
+        border: 1px solid #fe0078;
+        /*retira a borda padrão do textarea*/
+        outline: none;
+    }
+    
+    .comentario input,
+    textarea {
+        /*Faz com que o nome fique em cima do input*/
+        display: block;
+        border: 1px solid #eeeeee;
+    }
+    
+    textarea {
+        margin: 8px 0 0 0;
+        background: #ffffff;
+        box-sizing: border-box;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 400;
+        width: 732px;
+    }
+    
+    textarea:focus {
+        /*modifica a cor da borda do textarea quando selecionado*/
+        border: 1px solid #fe0078;
+        /*retira a borda padrão do textarea*/
+        outline: none;
+    }
+    
+    textarea:hover {
+        cursor: pointer;
+        /*modifica a cor da borda do textarea quando o mouse passa*/
+        border: 1px solid #fe0078;
+        /*retira a borda padrão do textarea*/
+        outline: none;
+    }
+    /* botaoComentario é um link */
+    #botaoComentario {
+        /*o all deve vir primiero, senão align-self não funciona;*/
+        all: unset;
+        align-self: flex-end;
+        border-radius: 20px;
+        background-color: #fe0078;
+        color: #ffffff;
+        font-size: 14px;
+        padding: 12px 24px;
+        margin: 60px 0 0 0;
+        cursor: pointer;
+    }
+    /**************************************CONFIGURAÇÃO DA BARRA LATERAL*****************************************/
+    
+    .barraLateral {
+        display: flex;
+        justify-content: center;
+        width: 380px;
+        height: 1396px;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+    }
+    
+    #pesquiseAqui {
+        box-sizing: border-box;
+        width: 340px;
+        margin: 20px 0 32px 0;
+        padding: 17px 20px;
+        font-size: 14px;
+        border: 1px solid #eeeeee;
+        border-radius: 10px;
+    }
+    
+    #pesquiseAqui:focus {
+        /*modifica a cor da borda do input quando selecionado*/
+        border: 1px solid #fe0078;
+        /*retira a borda padrão do input*/
+        outline: none;
+    }
+    
+    #pesquiseAqui:hover {
+        cursor: pointer;
+    }
+    
+    .barraLateral h1 {
+        text-align: left;
+        margin: 0;
+        padding: 0 10px;
+        font-family: "Open Sans";
+        font-weight: 700;
+        font-size: 18px;
+        color: black;
+        border-left: 2px solid #fe0078;
+    }
+    
+    .barraLateral ul {
+        padding: 0;
+        margin: 24px 0 31px 0;
+    }
+    
+    .categorias li {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 20px 16px 20px;
+        width: 100%;
+        border-bottom: 2px dotted #eeeeee;
+        /*Retira o marcador do li*/
+        list-style-type: none;
+    }
+    
+    .categorias li:hover {
+        border-bottom: 3px dashed #fe0078;
+        color: #fe0078;
+        cursor: pointer;
+    }
+    
+    .cards {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 32px;
+        margin: 41px 0 0 0;
+    }
+    
+    .card-vazio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 240px;
+        font-size: 36px;
+        background-color: #eeeeee;
+    }
+    
+    .rodape {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+        margin-top: 64px;
+        font-size: 14px;
+        background-color: #222222;
+        color: #fff;
+    }
+    /*************************************CONFIGURAÇÃO DA PÁGINA CONTATO***************************************/
+    
+    /*
+A class .contatos alinha verticalmente cada um dos
+3 post, afastando-os por um gap.Possui um box-
+sizing para que o pading e margin dos filhos 
+não ultrapassem a largura total do pai.
+*/
+    .contatos {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /*
+A class .contato possui um box-sizing para que o 
+pading e margin dos filhos não ultrapassem a 
+largura total do pai
+*/   
+    .contato {
+        box-sizing: border-box;
+        width: 730px;
+    }
+
+    /*
+A class .contatoConteudo alinha verticalmente os
+itens. Precisa ter a largura para configurar o
+botão
+*/    
+    .contatoConteudo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 14px;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.568);
+        background: #ffffff;
+    }
+
+    /*
+Estiliza o h1 do cabeçalho da class .contatoConteudo.
+*/    
+    .contatoConteudo>h1 {
+        padding: 24px 0 0 24px;
+        color: #000000;
+        font-size: 24px;
+        font-weight: bolt;
+    }
+
+    /*
+Estiliza o p do cabeçalho da class .contatoConteudo.
+*/    
+    .contatoConteudo>p {
+        padding: 0 24px;
+        margin: 0 0 32px 0;
+        font-size: 14px;
+    }
+    
+    h2 {
+        padding: 0 24px;
+        margin: 0 0 26px 0;
+        color: #000000;
+        font-size: 16px;
+        font-weight: bolt;
+    }
+    
+    .contatoConteudo li {
+        display: flex;
+    }
+    
+    .contatoConteudo span {
+        margin: 0 0 0 8px;
+    }
+
+    /*Essa div coloca os inputs alinhados em coluna*/ 
+    .entreEmContato {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+    }
+
+    #h2entreEmContato {
+        padding: 0;
+        color: #000000;
+        font-size: 16px;
+        font-weight: bolt;
+    }
+    
+    /*Essa div coloca nome e email lado a lado com flex*/ 
+    .entreEmContatoDados {
+        display: flex;
+        gap: 24px;
+        margin: 0 24px 24px 0;
+    }
+    
+    .entreEmContatoDados input {
+        /*Faz com que o nome fique em cima do input*/
+        display: block;
+        box-sizing: border-box;
+        width: 329px;
+        margin: 8px 0 0 0;
+        padding: 17px 20px;
+        font-size: 14px;
+        font-weight: 400;
+        border: 1px solid #eeeeee;
+    }
+    
+    .entreEmContatoDados input:focus {
+        /*modifica a cor da borda do textarea quando selecionado*/
+        border: 1px solid #fe0078;
+        /*retira a borda padrão do textarea*/
+        outline: none;
+    }
+    
+    .entreEmContatoDados input:hover {
+        cursor: pointer;
+        /*modifica a cor da borda do textarea quando selecionado*/
+        border: 1px solid #fe0078;
+        /*retira a borda padrão do textarea*/
+        outline: none;
+    }
+    
+    #assunto {
+        /*Faz com que o nome fique em cima do input*/
+        display: block;
+        margin: 8px 0 24px 0;
+        border: 1px solid #eeeeee;
+        width: 682px;
+        box-sizing: border-box;
+        padding: 17px 20px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    #assunto:focus {
+        /*modifica a cor da borda do textarea quando selecionado*/
+        border: 1px solid #fe0078;
+        /*retira a borda padrão do textarea*/
+        outline: none;
+    }
+    
+    #assunto:hover {
+        cursor: pointer;
+        /*modifica a cor da borda do textarea quando selecionado*/
+        border: 1px solid #fe0078;
+        /*retira a borda padrão do textarea*/
+        outline: none;
+    }
+    
+    .entreEmContato textarea {
+        /*Faz com que o nome fique em cima do input*/
+        display: block;
+        margin: 8px 0 0 0;
+        margin: 8px 0 0 0;
+        background: #ffffff;
+        box-sizing: border-box;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 400;
+        width: 682px;
+    }
+    
+    .entreEmContato textarea:focus {
+        /*modifica a cor da borda do textarea quando selecionado*/
+        border: 1px solid #fe0078;
+        /*retira a borda padrão do textarea*/
+        outline: none;
+    }
+    
+    .entreEmContato textarea:hover {
+        cursor: pointer;
+        /*modifica a cor da borda do textarea quando selecionado*/
+        border: 1px solid #fe0078;
+        /*retira a borda padrão do textarea*/
+        outline: none;
+    }
+    
+    #botaoEnviar {
+        /*o all deve vir primiero, senão align-self não funciona;*/
+        all: unset;
+        align-self: flex-end;
+        border-radius: 20px;
+        background-color: #fe0078;
+        color: #ffffff;
+        font-size: 14px;
+        padding: 12px 24px;
+        margin: 24px 0 0 0;
+        cursor: pointer;
+    }
+    
